@@ -1,7 +1,7 @@
 # Projet E5 DevSecOps – ESTIAM Metz  
 ## Groupe WMD – Rapport de réalisation  
-**Nom : Aurian BOHN**  
-**Binôme : Aurelien ROSELLO**  
+**Nom : Aurelien ROSELLO**  
+**Binôme : Aurian BOHN**  
 **Date : 16 avril 2025**
 
 ## 📚 Sommaire
@@ -44,7 +44,7 @@ L’architecture repose sur un cluster Kubernetes local (via Minikube), héberge
    │                │                │
    ▼                ▼                ▼
   Django          Next.js           Flask
- Port 80         Port 9090         Port 8080
+ Port 80       Port 9090         Port 8080
 
 ```
 
@@ -256,7 +256,7 @@ RUN pip install --no-cache-dir --upgrade pip && \
 # Copier tout le reste du code
 COPY . .
 
-# Port exposé : 8080 (selon les besoins du client)
+# Port exposé : 8080 
 EXPOSE 8080
 
 # Lancement de l’app avec Gunicorn en mode production
@@ -451,6 +451,20 @@ k apply -f k8s/next-js-service.yml
 k apply -f k8s/flask-deployment.yml
 k apply -f k8s/flask-service.yml
 ```
+
+## 🔁 Commandes `port-forward` (accès local aux applications)
+
+```bash
+# Django (exposé en local sur le port 80)
+k port-forward svc/django-service 80:80
+
+# Flask (exposé en local sur le port 8080)
+k port-forward svc/flask-service 8080:8080
+
+# Next.js (exposé en local sur le port 9090)
+k port-forward svc/next-service 9090:9090
+```
+📌 Ces commandes doivent être lancées dans des terminaux séparés, pour que chaque redirection reste active.
 
 ## 🖼️ Captures d'écran du projet
 

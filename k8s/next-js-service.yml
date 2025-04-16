@@ -5,8 +5,8 @@ metadata:
 spec:
   selector:
     app: next-app
+  type: LoadBalancer
   ports:
-    - protocol: TCP
-      port: 9090
+    - port: 9090
       targetPort: 9090
-  type: ClusterIP
+

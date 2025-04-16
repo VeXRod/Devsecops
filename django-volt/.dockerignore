@@ -1,0 +1,31 @@
+# Répertoires de dev
+__pycache__/
+*.py[cod]
+*.sqlite3
+*.log
+*.env
+*.db
+*.bak
+*.swp
+
+# Répertoires spécifiques
+.env/
+venv/
+env/
+.idea/
+.vscode/
+.mypy_cache/
+.coverage
+node_modules/
+
+# Git
+.git/
+.gitignore
+
+# Fichiers générés par collectstatic
+staticfiles/
+static/
+
+# Docker
+Dockerfile
+.dockerignore

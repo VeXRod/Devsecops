@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.log
+*.sqlite3
+*.env
+*.db
+*.swp
+*.bak
+
+# Environnement virtuel
+venv/
+env/
+
+# IDE & outils
+.vscode/
+.idea/
+.mypy_cache/
+
+# Node.js (si jamais intégré pour frontend)
+node_modules/
+
+# Git
+.git/
+.gitignore
+
+# Media & statiques générés
+media/
+static/
+
+# Docker
+Dockerfile
+.dockerignore

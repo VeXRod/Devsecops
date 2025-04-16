@@ -7,6 +7,6 @@ spec:
     app: django-app
   type: LoadBalancer
   ports:
-    - port: 5005
+    - port: 80
       targetPort: 5005
 
